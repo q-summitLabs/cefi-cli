@@ -22,6 +22,12 @@ func init() {
 			Description: "Displays a help message",
 			Callback:    func(args []string) error { return CommandHelp(args) },
 		},
+
+		"transactions": {
+			Name:        "transactions",
+			Description: "Displays the transaction between the specified dates",
+			Callback:    func(args []string) error { return CommandTransactions(args) },
+		},
 	}
 
 }
@@ -47,6 +53,11 @@ func CommandHelp(args []string) error {
 	}
 
 	fmt.Println()
+
+	return nil
+}
+
+func CommandTransactions(args []string) error {
 
 	return nil
 }
